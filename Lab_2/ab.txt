@@ -1,0 +1,129 @@
+PS C:\Users\Анастасия\2024-MAI-Backend-A-Burova> .\ab -c 10 -n 20 http://localhost//
+This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        nginx/1.25.5
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          //
+Document Length:        229 bytes
+
+Time taken for tests:   2.087 seconds
+Complete requests:      20
+Failed requests:        0
+Total transferred:      9220 bytes
+HTML transferred:       4580 bytes
+Requests per second:    9.58 [#/sec] (mean)
+Time per request:       1043.648 [ms] (mean)
+Time per request:       104.365 [ms] (mean, across all concurrent requests)
+Transfer rate:          4.31 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.5      1       1
+Processing:     8   21   8.3     27      30
+Waiting:        2   21   9.1     26      30
+Total:          8   22   8.5     27      31
+
+Percentage of the requests served within a certain time (ms)
+  50%     27
+  66%     28
+  75%     29
+  80%     29
+  90%     31
+  95%     31
+  98%     31
+  99%     31
+ 100%     31 (longest request)
+PS C:\Users\Анастасия\2024-MAI-Backend-A-Burova> .\ab -c 10 -n 20 http://localhost/public/ezhik.jpg
+This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        nginx/1.25.5
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /public/ezhik.jpg
+Document Length:        184886 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2.101 seconds
+Complete requests:      20
+Failed requests:        0
+Total transferred:      3702500 bytes
+HTML transferred:       3697720 bytes
+Requests per second:    9.52 [#/sec] (mean)
+Time per request:       1050.489 [ms] (mean)
+Time per request:       105.049 [ms] (mean, across all concurrent requests)
+Transfer rate:          1720.97 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.6      1       2
+Processing:    11   22   6.6     24      31
+Waiting:        6   20   7.8     23      30
+Total:         11   23   7.1     25      32
+
+Percentage of the requests served within a certain time (ms)
+  50%     25
+  66%     28
+  75%     29
+  80%     30
+  90%     31
+  95%     32
+  98%     32
+  99%     32
+ 100%     32 (longest request)
+PS C:\Users\Анастасия\2024-MAI-Backend-A-Burova> .\ab -c 10 -n 20 http://localhost/backend         
+This is ApacheBench, Version 2.3 <$Revision: 1913912 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        nginx/1.25.5
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /backend
+Document Length:        169 bytes
+
+Concurrency Level:      10
+Time taken for tests:   2.041 seconds
+Complete requests:      20
+Failed requests:        0
+Non-2xx responses:      20
+Total transferred:      7280 bytes
+HTML transferred:       3380 bytes
+Requests per second:    9.80 [#/sec] (mean)
+Time per request:       1020.356 [ms] (mean)
+Time per request:       102.036 [ms] (mean, across all concurrent requests)
+Transfer rate:          3.48 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    1   0.5      1       1
+Processing:     4   10   3.0     11      14
+Waiting:        1    7   3.5      7      13
+Total:          5   11   2.8     12      14
+
+Percentage of the requests served within a certain time (ms)
+  50%     12
+  66%     13
+  75%     13
+  80%     14
+  90%     14
+  95%     14
+  98%     14
+  99%     14
+ 100%     14 (longest request)
