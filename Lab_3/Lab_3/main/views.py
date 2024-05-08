@@ -11,13 +11,13 @@ from .models import Category, Product, Customer, Order, OrderItem
 def categories(request):
     #category_objects = Category.objects.all()
     #return JsonResponse({'categories': [model_to_dict(category) for category in category_objects]})
-    return JsonResponse({'category': "model_to_dict(current_category)"})
+    return JsonResponse({'category': "none"})
 
 @csrf_exempt
 @require_http_methods(['GET'])
 def products(request):
     product_objects = Product.objects.all()
-    return JsonResponse({'product': "model_to_dict(current_product)"})
+    return JsonResponse({'product': "none"})
     # return JsonResponse({'products': [model_to_dict(product) for product in product_objects]})
 
 @csrf_exempt
@@ -25,13 +25,13 @@ def products(request):
 def category(request, category_id):
     # current_category = Category.objects.get(pk=category_id)
     # return JsonResponse({'category': model_to_dict(current_category)})
-    return JsonResponse({'category': "model_to_dict(current_category)"})
+    return JsonResponse({'category': "none)"})
 
 @csrf_exempt
 @require_http_methods(['GET'])
 def product(request, product_id):
     current_product = Product.objects.get(pk=product_id)
-    return JsonResponse({'product': "model_to_dict(current_product)"})
+    return JsonResponse({'product': "none"})
     # return JsonResponse({'product': model_to_dict(current_product)})
 
 @csrf_exempt
@@ -65,7 +65,7 @@ def update_product(request, product_id):
     # product.available = data.get('available')
     # product.save()
     # return JsonResponse({'product': model_to_dict(product)})
-    return JsonResponse({'product': "model_to_dict(product)"})
+    return JsonResponse({'product': "none"})
 
 # @csrf_exempt
 # @require_http_methods(['DELETE'])
