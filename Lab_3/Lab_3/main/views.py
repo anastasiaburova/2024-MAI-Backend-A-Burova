@@ -24,7 +24,6 @@ def products(request):
 @require_http_methods(['GET'])
 def category(request, category_id):
     # current_category = Category.objects.get(pk=category_id)
-    # return JsonResponse({'category': model_to_dict(current_category)})
     return JsonResponse({'category': "none)"})
 
 @csrf_exempt
@@ -32,7 +31,7 @@ def category(request, category_id):
 def product(request, product_id):
     current_product = Product.objects.get(pk=product_id)
     return JsonResponse({'product': "none"})
-    # return JsonResponse({'product': model_to_dict(current_product)})
+
 
 @csrf_exempt
 @require_http_methods(['POST'])
@@ -67,10 +66,4 @@ def update_product(request, product_id):
     # return JsonResponse({'product': model_to_dict(product)})
     return JsonResponse({'product': "none"})
 
-# @csrf_exempt
-# @require_http_methods(['DELETE'])
-# def delete_product(request, product_id):
-#     product = Product.objects.get(pk=product_id)
-#     product.delete()
-#     return JsonResponse({'status': 'ok'})
 
